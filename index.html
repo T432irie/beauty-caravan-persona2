@@ -291,6 +291,20 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
+.hero.hero--mv-only {
+  min-height: 0;
+}
+
+/* メインビジュアル：常に表示幅＝ビューポート幅（SPで横幅が切れない） */
+.hero.hero--mv-only .hero__bg-video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: top center;
+}
+
 .hero__bg-video {
   position: absolute;
   top: 0;
@@ -2828,54 +2842,8 @@ ul { list-style: none; }
 <!-- ============================================
      1. HERO
      ============================================ -->
-<section class="hero" id="hero">
-  <video class="hero__bg-video" autoplay muted loop playsinline>
-    <source src="video/Mv_mov02.mp4" type="video/mp4">
-  </video>
-  <div class="hero__brand">
-    <div class="hero__brand-logo">
-      <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 8L16 20L8 32M24 8L16 20L24 32" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="34" y="24" font-family="Montserrat, sans-serif" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="2">WINBACK</text>
-      </svg>
-      <span class="hero__brand-tagline">BETTER FASTER GENTLER</span>
-    </div>
-  </div>
-  <div class="container">
-    <div class="hero__inner">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          <span class="hero__title-main">ラジオ波機器を<br>買い換え検討の<br>あなたへ。</span>
-          <span class="hero__title-sub">高周波機器で選ばれるのは、<br>ダントツでWINBACKです。</span>
-        </h1>
-
-        <div class="hero__device">
-          <img src="img/img1.png" alt="BACK4 AX 機器">
-        </div>
-
-        <div class="hero__badges">
-          <div class="hero__badge">
-            <span class="hero__badge-label">POINT</span><span class="hero__badge-num">01</span>
-            <span class="hero__badge-text">複数周波数のミックスエネルギー搭載</span>
-          </div>
-          <div class="hero__badge">
-            <span class="hero__badge-label">POINT</span><span class="hero__badge-num">02</span>
-            <span class="hero__badge-text">プローブ施術と手技施術の両立</span>
-          </div>
-          <div class="hero__badge">
-            <span class="hero__badge-label">POINT</span><span class="hero__badge-num">03</span>
-            <span class="hero__badge-text">世界55カ国・30,000台以上の導入実績</span>
-          </div>
-        </div>
-
-        <div class="hero__tagline">
-          単一周波数ではない。<br>
-          高周波・中周波・低周波を組み合わせた<strong>マルチ周波数出力</strong>が可能。<br>
-          さらに<strong>手技の延長で高周波施術ができる</strong>唯一の施術スタイル。
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="hero hero--mv-only" id="hero">
+  <img class="hero__bg-video" src="image_2026_3_19.png" alt="">
 </section>
 
 
